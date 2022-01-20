@@ -1,0 +1,59 @@
+<html>
+    <head>
+      <title>Cream's Recognizer</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js" target="_blank"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+  
+     <link rel="stylesheet" href="style.css">
+    
+    </head>
+  
+    <body background="rainbow-love-heart-background-red-wood-60045149.jpg">
+    <div class="container">
+      
+      <center>
+        <h3 class="btn btn-default heading">Cream's Recognizer</h3>
+        <br><br>
+  
+        <p style="font-size: 22px;">Model is trained to identify the following creams: </p>
+  
+        
+  
+        <br><br>
+  <b class="name_of_objects">
+    LACTO CALAMINE
+    <hr>
+    GLIZIGEN SPRAY
+    <hr>
+    DECOMEDO GEL
+    <hr>
+    RADIGLOW
+    <hr>
+    UV DOUX
+    <hr>
+    SEBOGEL
+    <hr>
+    SANITIZER SPRAY
+    <hr>
+    JOHNSONS BABY LOTION
+    <hr>
+    HIMALAYA COCOA BUTTER BODY LOTION
+  </b>
+  <hr> 
+  <label>Webcam View - </label>
+  <div id="camera"></div>
+        <br><br>
+  <div id="result"></div>
+        <br><br>
+        <button onclick="take_snapshot();" class="btn btn-info">Capture Image</button>
+        <br><br>
+  <button onclick="check();" class="btn btn-success">Identify Image</button>
+  <br><br>
+        <p style="font-size: 22px;">Object : <span id="result_object_name"></span> </p>
+        <p style="font-size: 22px;">Accuracy : <span id="result_object_accurancy"></span> </p>
+    </div>
+  <script src="main.js"></script>
